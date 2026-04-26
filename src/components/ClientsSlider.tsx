@@ -3,17 +3,17 @@
 import Image from "next/image";
 
 const logoClients = [
-  { name: "Realme", logo: "/companylogos/realme-1.svg" },
-  { name: "POSCO", logo: "/companylogos/posco-logo.svg" },
-  { name: "Sony", logo: "/companylogos/sony-logo-1.svg" },
-  { name: "Air Asia", logo: "/companylogos/air-asia.svg" },
-  { name: "HCL Tech", logo: "/companylogos/hcltech-1.svg" },
-  { name: "Hitachi", logo: "/companylogos/hitachi-3.svg" },
-  { name: "CNH Industrial", logo: "/companylogos/cnh-industrial.svg" },
-  { name: "CLAAS", logo: "/companylogos/claas-1.svg" },
-  { name: "Compass Group", logo: "/companylogos/compass-group-2.svg" },
-  { name: "McDermott", logo: "/companylogos/mcdermott.svg" },
-  { name: "Union Bank of India", logo: "/companylogos/union-bank-of-india.svg" },
+  { name: "Realme", logo: "/companyLogos/realme-1.svg" },
+  { name: "POSCO", logo: "/companyLogos/posco-logo.svg" },
+  { name: "Sony", logo: "/companyLogos/sony-logo-1.svg" },
+  { name: "Air Asia", logo: "/companyLogos/air-asia.svg" },
+  { name: "HCL Tech", logo: "/companyLogos/hcltech-1.svg" },
+  { name: "Hitachi", logo: "/companyLogos/hitachi-3.svg" },
+  { name: "CNH Industrial", logo: "/companyLogos/cnh-industrial.svg" },
+  { name: "CLAAS", logo: "/companyLogos/claas-1.svg" },
+  { name: "Compass Group", logo: "/companyLogos/compass-group-2.svg" },
+  { name: "McDermott", logo: "/companyLogos/mcdermott.svg" },
+  { name: "Union Bank of India", logo: "/companyLogos/union-bank-of-india.svg" },
 ];
 
 const textClients = [
