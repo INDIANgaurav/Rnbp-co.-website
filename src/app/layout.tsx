@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "R N B P & Co. Chartered Accountants – Trusted financial advisors providing expert services in Taxation, Audit, GST, and Business Advisory.",
   keywords:
     "chartered accountants, CA firm, taxation, audit, GST, financial advisory, RNBP",
+  icons: {
+    icon: '/companyLogos/rnbplogo.png',
+    apple: '/companyLogos/rnbplogo.png',
+  },
 };
 
 export default function RootLayout({
