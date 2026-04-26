@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0a1628;
+  --navy-light: #112240;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --cream: #f8f5f0;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: var(--cream);
+  color: var(--navy);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-sans {
+  font-family: 'Arial', sans-serif;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker 30s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-ticker-reverse {
+  animation: ticker-reverse 25s linear infinite;
+}
+
+.animate-ticker-reverse:hover {
+  animation-play-state: paused;
+}
