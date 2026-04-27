@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "12+", label: "Years of Excellence" },
-  { value: "6", label: "Expert Partners" },
+  { value: "14+", label: "Years of Excellence" },
+  { value: "5", label: "Expert Partners" },
   { value: "12+", label: "Industries Served" },
   { value: "100%", label: "Client Satisfaction" },
 ];

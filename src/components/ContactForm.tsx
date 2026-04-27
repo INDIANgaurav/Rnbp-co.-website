@@ -24,6 +24,8 @@ export default function ContactForm() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -31,12 +33,35 @@ export default function ContactForm() {
     >
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setError(""); // Clear error on input change
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In production, connect to your backend/email service here
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to send message. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -159,11 +184,18 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="w-full bg-[#0a1628] text-white py-4 font-bold text-sm tracking-wide hover:bg-[#c9a84c] hover:text-[#0a1628] transition-colors duration-200 font-sans flex items-center justify-center gap-2"
+        disabled={loading}
+        className="w-full bg-[#0a1628] text-white py-4 font-bold text-sm tracking-wide hover:bg-[#c9a84c] hover:text-[#0a1628] transition-colors duration-200 font-sans flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Send Message
+        {loading ? 'Sending...' : 'Send Message'}
         <Send size={16} />
       </button>
+
+      {error && (
+        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 text-sm font-sans">
+          {error}
+        </div>
+      )}
     </form>
   );
 }

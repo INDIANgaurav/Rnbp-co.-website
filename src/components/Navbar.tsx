@@ -32,18 +32,21 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-[#c9a84c]/20 ${
-        scrolled ? "bg-[#e8dcc8] shadow-sm py-3" : "bg-[#e8dcc8] py-4"
+        scrolled ? "bg-[#e8dcc8] shadow-sm py-2" : "bg-[#e8dcc8] py-3"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex flex-col leading-tight">
-            <span className="text-[#c9a84c] font-bold text-xl tracking-widest">
+            <span className="text-[#c9a84c] font-bold text-lg sm:text-xl tracking-[0.25em]" style={{ fontFamily: 'Georgia, serif' }}>
               R N B P & Co.
             </span>
-            <span className="text-[#0a1628]/60 text-xs tracking-wider font-sans">
+            <span className="text-[#0a1628] text-[9px] sm:text-[10px] tracking-[0.15em] uppercase font-semibold -mt-0.5">
               Chartered Accountants
+            </span>
+            <span className="text-[#0a1628]/70 text-[8px] sm:text-[9px] tracking-[0.1em] uppercase -mt-0.5">
+              Peer Reviewed Firm
             </span>
           </Link>
 

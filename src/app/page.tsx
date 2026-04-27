@@ -3,7 +3,7 @@ import Ticker from "@/components/home/Ticker";
 import Stats from "@/components/home/Stats";
 import Services from "@/components/home/Services";
 import WhyUs from "@/components/home/WhyUs";
-import Testimonials from "@/components/home/Testimonials";
+import WhyUsCustomers from "@/components/home/WhyUsCustomers";
 import CTA from "@/components/home/CTA";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <Stats />
       <Services />
       <WhyUs />
-      <Testimonials />
+      <WhyUsCustomers />
       <CTA />
     </>
   );

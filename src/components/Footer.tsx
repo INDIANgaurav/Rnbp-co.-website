@@ -36,7 +36,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16"
         >
           {/* Column 1: Let's Discuss */}
           <div>
@@ -94,29 +94,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Column 4: Newsletter */}
-          <div>
-            <h3 className="text-[#0a1628] font-bold text-lg mb-6 leading-snug">
-              Stay tuned and subscribe to our newsletter.
-            </h3>
-            <div className="flex items-stretch border border-[#0a1628]/20 bg-white/60 mb-3">
-              <input
-                type="email"
-                placeholder="Your Email Address"
-                className="flex-1 bg-transparent px-4 py-3 text-sm text-[#0a1628] placeholder:text-[#0a1628]/40 font-sans outline-none"
-              />
-              <button
-                className="bg-[#c9a84c] hover:bg-[#b8974a] transition-colors px-4 flex items-center justify-center"
-                aria-label="Subscribe"
-              >
-                <ArrowRight size={18} className="text-white" />
-              </button>
-            </div>
-            <p className="text-[#0a1628]/50 text-xs font-sans">
-              By Subscribing, You Accept Privacy Policy
-            </p>
           </div>
         </motion.div>
 

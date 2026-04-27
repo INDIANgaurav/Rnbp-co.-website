@@ -1,14 +1,11 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import {
-  FileText,
-  BarChart2,
   Building2,
   Calculator,
   Briefcase,
   BookOpen,
   Globe,
-  PieChart,
   ArrowRight,
 } from "lucide-react";
 import ClientsSlider from "@/components/ClientsSlider";
@@ -16,102 +13,67 @@ import ClientsSlider from "@/components/ClientsSlider";
 export const metadata: Metadata = {
   title: "Services | R N B P & Co. Chartered Accountants",
   description:
-    "Comprehensive CA services including Offshore Accounting, Audit & Assurance, GST, Direct Tax, Accounting, Management Consultancy, and Valuation Services.",
+    "Financial Reporting Software as a Service (SaaS) - Comprehensive services including Assurance, Advisory, Accounting/Book-keeping, and Management Consultancy.",
 };
 
 const offshoreServices = [
   {
-    title: "Book-Keeping",
+    title: "Assurance",
     items: [
-      "Reconciliations – payments received, interest income, tax payments",
-      "Salaries & wages, vendor payments, investments, petty cash",
-      "Supported ERPs: SAP, Microsoft Dynamics, Oracle ERP, QuickBooks, Sage",
+      "Statutory Audit",
+      "Financial Due Diligence",
+      "Internal Audit",
+      "Tax Audit & Bank Audit",
+      "Special Audits",
+      "Fixed Assets & Stock Verification",
     ],
   },
   {
-    title: "Accounts Payable",
+    title: "Advisory Service",
     items: [
-      "Offshore outsourced AP management services across the globe",
-      "Invoice processing and vendor payment management",
-      "AP reconciliation and reporting",
+      "Indirect Tax - GST/VAT Advisory",
+      "Direct Tax - Corporate & Individual Advisory",
+      "International Taxation Advisory",
+      "Transfer Pricing Advisory",
+      "Business Valuation Services",
     ],
   },
   {
-    title: "Accounts Receivable",
+    title: "Accounting/Book-keeping and Process automation",
     items: [
-      "Accelerated cash flow management",
-      "Enhanced customer service and reduced administrative burden",
-      "Offshore outsourced AR management services across the globe",
+      "Complete Accounting Outsourcing",
+      "Ind AS/IFRS/US GAAP Conversion",
+      "Account reconciliations",
+      "Preparation of Financial Statements",
+      "Monthly PL, BS, CF & FF for MIS",
     ],
   },
   {
-    title: "Reconciliation of Accounts",
+    title: "Management consultancy",
     items: [
-      "Verification against independent third-party reports",
-      "Minimizes overdrafts and improves financial accuracy",
-      "Strengthens bookkeeping controls",
+      "Virtual CFO",
+      "Finance outsourcing",
+      "Risk control matrices (RCMs)",
+      "DRHP/RHP/Prospectus Preparation",
+      "Restated Financial Statements (SEBI)",
+      "Technical Accounting Advisory",
     ],
   },
   {
-    title: "Invoicing",
+    title: "Financial Reporting Software as a service (SaaS)",
     items: [
-      "Invoice creation automation",
-      "Compliance adherence",
-      "Timely invoice delivery",
+      "FinSoEasy360 - Financial reconciliation & reporting",
+      "LAMsoEasy360 - Complete lease accounting solution",
+      "Real-Time Consolidation",
+      "Customizable Reporting Templates",
+      "Cloud-Based Data Security (AWS)",
+      "Automated ROU Asset & Lease Liability Calculations",
     ],
-  },
-  {
-    title: "MIS Reporting",
-    items: [
-      "Reports, Dashboards, Data Visualizations",
-      "Departments: Finance, Marketing, Operations, HR",
-      "Specialized software tools",
-    ],
-  },
-  {
-    title: "Payroll Processing",
-    items: [
-      "Attendance tracking from biometrics",
-      "Statutory compliances",
-      "Employee salary access portal & leave application module",
-    ],
+    link: "https://finsensor.ai/",
   },
 ];
 
 const services = [
-  {
-    icon: Calculator,
-    title: "Accounting / Book-Keeping & Process Automation",
-    description: "Complete accounting outsourcing and process automation services.",
-    features: [
-      "Complete Accounting Outsourcing",
-      "Ind AS / IFRS / US GAAP Conversion / Implementation",
-      "Account Reconciliations",
-      "Setting Chart of Accounts",
-      "Preparation of Fixed Asset Register",
-      "Preparation of Financial Statements",
-      "Audit Support",
-      "Monthly PL, BS, CF & FF for MIS",
-      "PF&A Activities Automation",
-      "Preparation of financial statements and its automation",
-    ],
-  },
-  {
-    icon: BarChart2,
-    title: "GST Audit and Compliance",
-    description: "Complete GST audit, compliance and advisory services.",
-    features: [
-      "GST Audit",
-      "Advising / Assisting Companies on preparing the detailed list of records / documents that needs to be filed with the Government under GST regime",
-      "Providing checklist of information / details required for the purpose of preparing the GST Audit report",
-      "Review of information / documents collated as per the requirements of GST law",
-      "Preparing the reconciliation statement in the prescribed format of the disclosures made in the GST returns and the audited financial statements (as per the state wise financial statement)",
-      "Preparing the GST Audit report and the positions internally adopted by the companies and aligning the same with the GST law",
-      "Assistance in HSN and rate finalization",
-      "Valuations of Supplies",
-      "Monthly return finalization and filing with Authority",
-    ],
-  },
   {
     icon: BookOpen,
     title: "Assurance",
@@ -125,66 +87,94 @@ const services = [
       "Bank Audit",
       "Special Audits",
       "Fixed Assets Verification and Reconciliation",
+      "Stock Verification and Reconciliation",
       "Internal Financial Control management testing",
       "Corporate Governance Compliance",
     ],
   },
   {
     icon: Briefcase,
-    title: "Management Consultancy",
-    description: "Strategic management consultancy and CFO services for business growth.",
+    title: "Advisory Service",
+    description: "Strategic advisory services for tax, valuation, and regulatory compliance.",
     features: [
-      "Virtual CFO",
-      "Finance outsourcing",
-      "Preparation of financial information to be included in DRHP / RHP / Prospectus",
-      "Preparation of Restated Financial Statements as per SEBI requirements",
-      "Bank reconciliation",
-      "Processing of Monthly Payroll",
-      "Compliance of Provident Fund, ESI and Gratuity",
-      "Verification of Investment Proof and other deduction claimed by Employee",
-      "Computation of TDS on Salary of Employee",
-      "Maintenance of Payroll Master",
-      "Full and Final Settlement",
-      "Technical Accounting Advisory in various GAAPs (IFRS / IND AS / US GAAP)",
-      "Internal Financial Control management testing formulation",
-    ],
-  },
-  {
-    icon: PieChart,
-    title: "Valuation",
-    description: "Professional business and asset valuation services for various purposes.",
-    features: [
+      "Indirect Tax",
+      "GST/VAT Advisory and Compliance",
+      "Advisory on taxability, input tax credit eligibility, and cross-charge implications",
+      "Representation before GST",
+      "Authorities/Appeal/Litigation",
+      "Health Check and Diagnostic Reviews",
+      "Direct Tax",
+      "Corporate and Individual Tax Advisory",
+      "Advisory on Withholding Tax (TDS/TCS)",
+      "International Taxation Advisory",
+      "Transfer Pricing Advisory",
+      "Representation before Tax Authorities/Litigation",
+      "Valuation",
       "Business valuation for transaction, restructuring, or investment purposes",
       "Valuation under regulatory requirements (Income Tax Act, FEMA, Companies Act)",
       "Valuation for financial reporting under Ind AS",
       "Valuation of intangible assets, goodwill, and brand",
       "Purchase price allocation and impairment testing support",
-      "Fair value determination",
     ],
   },
   {
-    icon: FileText,
-    title: "Direct Tax",
-    description: "Comprehensive direct taxation services for individuals and corporates.",
+    icon: Calculator,
+    title: "Accounting/Book-keeping and Process automation",
+    description: "Complete accounting outsourcing and process automation services.",
     features: [
-      "Corporate and Individual Tax Advisory",
-      "Advisory on Withholding Tax (TDS / TCS)",
-      "International Taxation Advisory",
-      "Transfer Pricing Advisory",
-      "Representation before Tax Authorities / Litigation",
-      "Tax Planning & Optimization",
-      "ITR Filing for all categories",
-      "Income Tax Notices & Appeals",
+      "Complete Accounting Outsourcing",
+      "Ind AS / IFRS / US GAAP Conversion / Implementation",
+      "Account reconciliations",
+      "Setting Chart of Accounts",
+      "Preparation of Fixed Asset Register preparation",
+      "Preparation of Financial Statements",
+      "Audit Support",
+      "Monthly PL, BS, CF & FF for MIS",
+      "PF&A Activities Automation",
+      "Preparation of financial statements and its automation",
+      "Financial Reporting Software as a service (SaaS)",
     ],
   },
-];
-
-const whyOffshore = [
-  { title: "Workforce Skill & Proficiency", desc: "India's highly skilled workforce with strong English communication." },
-  { title: "Time Zone Advantages", desc: "Enables near 24-hour work cycles for US, Canada & Europe clients." },
-  { title: "Technical Assistance", desc: "Advanced ERP support and infrastructure." },
-  { title: "Legal & Compliance Efficiency", desc: "Professionals versed in US GAAP, IFRS, and international regulations." },
-  { title: "Operational & Financial Efficiency", desc: "Reduced hiring/management costs and operational risks." },
+  {
+    icon: Building2,
+    title: "Management consultancy",
+    description: "Strategic management consultancy and CFO services for business growth.",
+    features: [
+      "Virtual CFO",
+      "Finance outsourcing",
+      "Designing/preparation of process notes/standard operating procedures and Risk control matrices (RCMs)",
+      "Identifying the design gaps GAAPs with current system with the requirements of IFC as per ICAI Guidance note",
+      "Preparation of financial information to be included in DRHP/RHP/Prospectus",
+      "Preparation of Restated Financial Statements and Proforma Financial Statements as per SEBI requirements",
+      "Bank reconciliation",
+      "Processing of Monthly Payroll",
+      "Verification of Investment Proof and other deduction claimed by Employee",
+      "Maintenance of Payroll Master",
+      "Technical Accounting Advisory in various GAAPs (IFRS/IND AS/US GAAP)",
+    ],
+  },
+  {
+    icon: Globe,
+    title: "Financial Reporting Software as a service (SaaS)",
+    description: "Advanced cloud-based financial reporting and lease accounting solutions.",
+    features: [
+      "FinSoEasy360 - Seamless financial reconciliation and reporting automation",
+      "LAMsoEasy360 - Complete lease accounting solution from calculation to recognition",
+      "Real-Time Consolidation across units, subsidiaries, and joint ventures",
+      "Customizable Reporting Templates for statutory requirements",
+      "Segment-Wise Reporting with single click financial analysis",
+      "Centralized Data Management with integrity and security",
+      "Cloud-Based Data Security powered by AWS",
+      "Collaborative Workflows with role-based access and audit trails",
+      "Leasemaster Data Management for key lease terms and disclosures",
+      "Automated ROU Asset & Lease Liability Calculations",
+      "Interest and Amortisation Engine with periodic calculations",
+      "Journal Entries and ERP Integration (FinSoEasy360 or any ERP)",
+      "Disclosure and Reporting Suite with Ind AS 116 disclosures",
+      "Lease Lifecycle Tracking from identification to termination",
+    ],
+    link: "https://finsensor.ai/",
+  },
 ];
 
 export default function ServicesPage() {
@@ -209,8 +199,9 @@ export default function ServicesPage() {
           </h1>
           <div className="w-12 h-0.5 bg-[#c9a84c] mb-6" />
           <p className="text-[#0a1628]/60 font-sans max-w-2xl leading-relaxed">
-            RNBP is poised to deliver exceptional financial solutions to clients across borders 
-            and industries, leveraging its global network of skilled professionals.
+            Financial Reporting Software as a Service (SaaS) - RNBP delivers exceptional financial 
+            solutions to clients across borders and industries, leveraging its global network of 
+            skilled professionals.
           </p>
         </div>
       </section>
@@ -234,46 +225,43 @@ export default function ServicesPage() {
             skilled professionals — all contributing to improved bottom-line results.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-16">
-            {offshoreServices.map((s, i) => (
-              <div key={i} className="bg-[#f8f5f0] p-6 border border-[#0a1628]/10">
-                <h3 className="text-[#0a1628] font-bold mb-3 text-base">{s.title}</h3>
-                <ul className="space-y-1.5">
-                  {s.items.map((item, j) => (
-                    <li key={j} className="flex items-start gap-2 text-xs text-[#0a1628]/60 font-sans">
-                      <span className="w-1 h-1 bg-[#c9a84c] rounded-full shrink-0 mt-1.5" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          {/* Why Offshore */}
-          <div className="bg-[#f8f5f0] p-8 border border-[#c9a84c]/20">
-            <h3 className="text-[#0a1628] text-xl font-bold mb-6">Why Businesses Should Consider RNBP for Offshore Accounting</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-              {whyOffshore.map((w, i) => (
-                <div key={i} className="text-center p-4">
-                  <div className="w-8 h-8 bg-[#c9a84c]/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-[#c9a84c] font-bold text-sm">{i + 1}</span>
-                  </div>
-                  <h4 className="text-[#0a1628] font-bold text-sm mb-1">{w.title}</h4>
-                  <p className="text-[#0a1628]/55 text-xs font-sans">{w.desc}</p>
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {offshoreServices.map((s, i) => {
+              const CardWrapper = s.link ? 'a' : 'div';
+              const cardProps = s.link 
+                ? { href: s.link, target: "_blank", rel: "noopener noreferrer", className: "bg-[#f8f5f0] p-6 border border-[#0a1628]/10 hover:border-[#c9a84c] hover:shadow-lg transition-all duration-300 cursor-pointer block" }
+                : { className: "bg-[#f8f5f0] p-6 border border-[#0a1628]/10" };
+              
+              return (
+                <CardWrapper key={i} {...cardProps}>
+                  <h3 className="text-[#0a1628] font-bold mb-3 text-base">{s.title}</h3>
+                  <ul className="space-y-1.5">
+                    {s.items.map((item, j) => (
+                      <li key={j} className="flex items-start gap-2 text-xs text-[#0a1628]/60 font-sans">
+                        <span className="w-1 h-1 bg-[#c9a84c] rounded-full shrink-0 mt-1.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  {s.link && (
+                    <div className="mt-4 flex items-center gap-1 text-[#c9a84c] text-xs font-semibold">
+                      <span>Learn More</span>
+                      <ArrowRight size={14} />
+                    </div>
+                  )}
+                </CardWrapper>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Other Services Grid */}
+      {/* Comprehensive Services Grid */}
       <section className="bg-[#f8f5f0] py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-[#c9a84c] text-xs tracking-widest uppercase font-sans font-semibold">
-              Our Other Services
+              Our Services
             </span>
             <h2 className="text-[#0a1628] text-4xl font-bold mt-3 mb-4">
               Comprehensive Service Portfolio
@@ -284,8 +272,13 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => {
               const Icon = service.icon;
+              const CardWrapper = service.link ? 'a' : 'div';
+              const cardProps = service.link 
+                ? { href: service.link, target: "_blank", rel: "noopener noreferrer", className: "bg-white p-8 hover:shadow-lg hover:border-[#c9a84c] border border-transparent transition-all duration-300 cursor-pointer block" }
+                : { className: "bg-white p-8 hover:shadow-lg transition-shadow duration-300" };
+              
               return (
-                <div key={index} className="bg-white p-8 hover:shadow-lg transition-shadow duration-300">
+                <CardWrapper key={index} {...cardProps}>
                   <div className="flex items-start gap-5 mb-6">
                     <div className="w-12 h-12 bg-[#c9a84c]/10 border border-[#c9a84c]/20 flex items-center justify-center shrink-0">
                       <Icon size={20} className="text-[#c9a84c]" />
@@ -304,8 +297,16 @@ export default function ServicesPage() {
                         </li>
                       ))}
                     </ul>
+                    {service.link && (
+                      <div className="mt-8 pt-6 border-t border-gray-100">
+                        <div className="flex items-center gap-2 text-[#c9a84c] font-semibold text-sm hover:gap-3 transition-all">
+                          <span>Visit FinSensor.ai</span>
+                          <ArrowRight size={16} />
+                        </div>
+                      </div>
+                    )}
                   </div>
-                </div>
+                </CardWrapper>
               );
             })}
           </div>

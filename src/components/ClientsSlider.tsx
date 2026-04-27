@@ -23,7 +23,7 @@ const textClients = [
   "NHAI", "Freshworks", "IDEE", "ISRPL", "APTIII", "Rapidue",
 ];
 
-// Duplicate for seamless loop
+// Duplicate exactly 2x for perfect seamless loop
 const allLogos = [...logoClients, ...logoClients];
 const allText = [...textClients, ...textClients];
 
@@ -45,24 +45,26 @@ export default function ClientsSlider() {
       </div>
 
       {/* Logo Slider */}
-      <div className="relative mb-6">
+      <div className="relative mb-6 overflow-hidden">
         {/* Left fade */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
         {/* Right fade */}
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
-        <div className="flex animate-ticker">
+        <div className="flex animate-ticker items-center" style={{ width: 'max-content' }}>
           {allLogos.map((client, index) => (
             <div
-              key={index}
-              className="flex-shrink-0 mx-6 flex items-center justify-center h-16 w-36 transition-all duration-300"
+              key={`${client.name}-${index}`}
+              className="flex-shrink-0 mx-3 sm:mx-6 flex items-center justify-center h-10 sm:h-16"
+              style={{ width: '100px' }}
             >
               <Image
                 src={client.logo}
                 alt={client.name}
-                width={120}
-                height={48}
-                className="max-h-12 w-auto object-contain"
+                width={100}
+                height={40}
+                className="max-h-6 sm:max-h-10 w-auto object-contain"
+                unoptimized
               />
             </div>
           ))}
@@ -70,18 +72,18 @@ export default function ClientsSlider() {
       </div>
 
       {/* Text Clients Slider - opposite direction */}
-      <div className="relative mt-8">
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+      <div className="relative mt-8 overflow-hidden">
+        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-[#c9a84c] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-[#c9a84c] to-transparent z-10 pointer-events-none" />
 
         <div className="bg-[#c9a84c] py-3">
-          <div className="flex animate-ticker-reverse">
+          <div className="flex animate-ticker-reverse items-center" style={{ width: 'max-content' }}>
             {allText.map((name, index) => (
-              <div key={index} className="flex-shrink-0 flex items-center gap-4 mx-2">
-                <span className="text-white text-sm font-sans font-semibold whitespace-nowrap tracking-wide">
+              <div key={`${name}-${index}`} className="flex-shrink-0 flex items-center gap-3 sm:gap-4 mx-2">
+                <span className="text-white text-xs sm:text-sm font-sans font-semibold whitespace-nowrap tracking-wide">
                   {name}
                 </span>
-                <span className="text-white/40 text-lg">✦</span>
+                <span className="text-white/40 text-base sm:text-lg">✦</span>
               </div>
             ))}
           </div>

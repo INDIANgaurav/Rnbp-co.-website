@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Award, Target, Eye, Users, ArrowRight } from "lucide-react";
 import TeamSection from "@/components/about/TeamSection";
 import IndustriesSection from "@/components/about/IndustriesSection";
-import KeyTeamSection from "@/components/about/KeyTeamSection";
 
 export const metadata: Metadata = {
   title: "About Us | R N B P & Co. Chartered Accountants",
@@ -166,9 +165,6 @@ export default function AboutPage() {
 
       {/* Team - separate component */}
       <TeamSection />
-
-      {/* Key Team Members */}
-      <KeyTeamSection />
 
       {/* CTA */}
       <section className="bg-[#c9a84c] py-20">

@@ -28,10 +28,10 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-[#c9a84c]/10 to-transparent rounded-full blur-3xl opacity-30 translate-y-1/3 -translate-x-1/4 z-0" />
 
       {/* Background Text - positioned at top like other pages */}
-      <div className="absolute top-15 left-0 right-0 flex items-center justify-center pointer-events-none select-none overflow-hidden z-[1]">
+      <div className="absolute top-20 sm:top-24 left-0 right-0 flex items-center justify-center pointer-events-none select-none overflow-hidden z-[1]">
         <span
           className="text-[#c9a84c] font-black uppercase opacity-[0.2]"
-          style={{ fontSize: "clamp(4rem, 12vw, 16rem)", lineHeight: 1, letterSpacing: "-0.02em" }}
+          style={{ fontSize: "clamp(3rem, 15vw, 16rem)", lineHeight: 1, letterSpacing: "-0.02em" }}
         >
           RNBP 
         </span>
@@ -46,18 +46,18 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-24 pt-36 z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-16 sm:py-24 pt-28 sm:pt-36 z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* LEFT CONTENT */}
           <div className="relative z-10">
             {/* Badge */}
             <motion.div 
               {...fromLeft(0)} 
-              className="inline-flex items-center gap-2 bg-white border border-[#c9a84c]/30 px-4 py-2 mb-6 shadow-sm"
+              className="inline-flex items-center gap-2 bg-white border border-[#c9a84c]/30 px-3 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-6 shadow-sm"
             >
-              <Award size={14} className="text-[#c9a84c]" />
-              <span className="text-[#0a1628] text-xs tracking-wider uppercase font-sans font-medium">
+              <Award size={12} className="text-[#c9a84c] sm:w-[14px] sm:h-[14px]" />
+              <span className="text-[#0a1628] text-[10px] sm:text-xs tracking-wider uppercase font-sans font-medium">
                 Peer Reviewed Firm | Established 2012
               </span>
             </motion.div>
@@ -65,23 +65,23 @@ export default function Hero() {
             {/* Main Heading */}
             <motion.h1 
               {...fromLeft(0.15)} 
-              className="text-[#0a1628] text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] mb-4 tracking-tight"
+              className="text-[#0a1628] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-4 tracking-tight"
             >
               R N B P <span className="text-[#c9a84c]">&</span> Co.
             </motion.h1>
 
             <motion.h2 
               {...fromLeft(0.25)} 
-              className="text-[#0a1628]/70 text-xl sm:text-2xl font-light mb-8"
+              className="text-[#0a1628]/70 text-lg sm:text-xl md:text-2xl font-light mb-6 sm:mb-8"
             >
               Chartered Accountants
             </motion.h2>
 
-            <motion.div {...fromLeft(0.3)} className="w-20 h-[3px] bg-[#c9a84c] mb-8" />
+            <motion.div {...fromLeft(0.3)} className="w-16 sm:w-20 h-[3px] bg-[#c9a84c] mb-6 sm:mb-8" />
 
             <motion.p 
               {...fromLeft(0.4)} 
-              className="text-[#0a1628]/75 text-lg leading-relaxed mb-10 font-sans max-w-xl"
+              className="text-[#0a1628]/75 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10 font-sans max-w-xl"
             >
               Over a decade old firm established in 2012. We deliver outstanding value through 
               Offshore Accounting, Audit &amp; Assurance, IPO Assistance, GST, Direct Taxation, 
@@ -90,17 +90,17 @@ export default function Hero() {
             </motion.p>
 
             {/* Trust Indicators */}
-            <motion.div {...fromLeft(0.5)} className="flex flex-wrap gap-8 pt-4">
+            <motion.div {...fromLeft(0.5)} className="flex flex-wrap gap-4 sm:gap-6 lg:gap-8 pt-4">
               {[
                 { icon: Shield, text: "Established 2012" },
                 { icon: Award, text: "Peer Reviewed Firm" },
                 { icon: Users, text: "Expert Partners" },
               ].map(({ icon: Icon, text }) => (
-                <div key={text} className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#c9a84c]/10 flex items-center justify-center">
-                    <Icon size={18} className="text-[#c9a84c]" />
+                <div key={text} className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#c9a84c]/10 flex items-center justify-center">
+                    <Icon size={16} className="text-[#c9a84c] sm:w-[18px] sm:h-[18px]" />
                   </div>
-                  <span className="text-[#0a1628]/70 text-sm font-sans font-medium">{text}</span>
+                  <span className="text-[#0a1628]/70 text-xs sm:text-sm font-sans font-medium">{text}</span>
                 </div>
               ))}
             </motion.div>
@@ -119,8 +119,8 @@ export default function Hero() {
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6 mb-8">
                 {[
-                  { value: "12+", label: "Years of Excellence" },
-                  { value: "6", label: "Expert Partners" },
+                  { value: "14+", label: "Years of Excellence" },
+                  { value: "5", label: "Expert Partners" },
                   { value: "12+", label: "Industries Served" },
                   { value: "2012", label: "Established" },
                 ].map((stat) => (
