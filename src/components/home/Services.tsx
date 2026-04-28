@@ -99,7 +99,7 @@ const services = [
     graphic: ConsultancyGraphic,
     title: "Management Consultancy",
     description:
-      "Virtual CFO, Finance Outsourcing, IPO Process Support, Restated Financial Statements (SEBI), and Technical Accounting Advisory.",
+      "Virtual CFO, Finance Outsourcing, IPO Process Support, Restated Financial Statements (SEBI), and Technical Accounting Advisory, IPO Process Support,Hedge Accounting Advisory, Audit Support Services."
   },
   {
     graphic: ValuationGraphic,

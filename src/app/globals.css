@@ -10,6 +10,13 @@
 
 * {
   scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+@media (min-width: 768px) {
+  * {
+    scroll-padding-top: 140px;
+  }
 }
 
 body {

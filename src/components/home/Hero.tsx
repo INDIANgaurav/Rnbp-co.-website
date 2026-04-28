@@ -24,8 +24,8 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen bg-[#f8f5f0] flex items-center overflow-hidden">
       {/* Decorative background circles - Nangia style */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-[#f8f5f0] to-[#e8dcc8] rounded-full blur-3xl opacity-40 -translate-y-1/3 translate-x-1/3 z-0" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-[#c9a84c]/10 to-transparent rounded-full blur-3xl opacity-30 translate-y-1/3 -translate-x-1/4 z-0" />
+      <div className="absolute top-0 right-0 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-gradient-to-br from-[#f8f5f0] to-[#e8dcc8] rounded-full blur-3xl opacity-40 -translate-y-1/3 translate-x-1/3 z-0" />
+      <div className="absolute bottom-0 left-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-gradient-to-tr from-[#c9a84c]/10 to-transparent rounded-full blur-3xl opacity-30 translate-y-1/3 -translate-x-1/4 z-0" />
 
       {/* Background Text - positioned at top like other pages */}
       <div className="absolute top-20 sm:top-24 left-0 right-0 flex items-center justify-center pointer-events-none select-none overflow-hidden z-[1]">

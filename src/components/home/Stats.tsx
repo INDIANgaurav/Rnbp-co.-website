@@ -1,13 +1,40 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const stats = [
-  { value: "14+", label: "Years of Excellence" },
-  { value: "5", label: "Expert Partners" },
-  { value: "12+", label: "Industries Served" },
-  { value: "100%", label: "Client Satisfaction" },
+  { value: 14, suffix: "+", label: "Years of Excellence" },
+  { value: 5, suffix: "", label: "Expert Partners" },
+  { value: 12, suffix: "+", label: "Industries Served" },
+  { value: 100, suffix: "%", label: "Client Satisfaction" },
 ];
+
+function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const motionValue = useMotionValue(0);
+  const springValue = useSpring(motionValue, {
+    damping: 90,
+    stiffness: 100,
+  });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value);
+    }
+  }, [motionValue, isInView, value]);
+
+  useEffect(() => {
+    springValue.on("change", (latest) => {
+      if (ref.current) {
+        ref.current.textContent = Math.floor(latest).toString() + suffix;
+      }
+    });
+  }, [springValue, suffix]);
+
+  return <div ref={ref} />;
+}
 
 export default function Stats() {
   return (
@@ -24,7 +51,7 @@ export default function Stats() {
               className="text-center border-r border-[#0a1628]/10 last:border-0 px-4"
             >
               <div className="text-[#c9a84c] text-4xl sm:text-5xl font-bold mb-2">
-                {stat.value}
+                <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               </div>
               <div className="text-[#0a1628]/60 text-sm tracking-wide font-sans">
                 {stat.label}

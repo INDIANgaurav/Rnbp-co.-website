@@ -10,6 +10,17 @@ export const team = [
     description:
       "Amit Garg is a Chartered Accountant with over 20 years of experience in Ind AS/IFRS implementations, statutory audit, internal audit, process reviews, and due diligence. He is a seasoned and mature professional. He has previously worked in EY for more than 12 years in its audit and assurance division. He handled large multi-disciplinary projects, internal control reviews, capital market transactions and complex group level audits. He brings deep domain expertise to the design and implementation of financial reporting software that meets complex accounting and regulatory requirements, including Ind AS and IFRS standards. He understands the real-world needs of preparers, auditors, and CFOs, and is widely appreciated by clients and professionals for his pragmatic, business-oriented advice. Complementing his practice experience, Amit is also a faculty member for IFRS/Ind AS courses conducted by ICAI, Delhi University and corporates. Leveraging this unique blend of technical knowledge, audit practice insight, and training experience, he has conceptualised and developed a suite of software tools for financial statement consolidation, lease accounting and reporting automation. As CEO, he leads the vision and product strategy of the company, ensuring that the software is user-friendly, technically robust, and aligned with evolving accounting standards and audit expectations.",
   },
+   {
+    name: "Prashant Jha",
+    designation: "Chief Operations Officer",
+    phone: "+91-955 593 4205",
+    email: "prashant.jha@rnbp.in",
+    experience: "12+ years",
+    expertise: "Taxation, Assurance & Regulatory Advisory",
+    image: "/PrashantJha.jpg",
+    description:
+      "Prashant is a Chartered Accountant with over 12 years of experience in taxation, assurance, and regulatory advisory. He is renowned for his technical prowess in financial reporting, consolidations and taxation. Prashant previously worked for more than three years at S. R. Batliboi & Co. LLP (an EY member firm), serving diverse clients including listed corporates, leading real estate developers, and players in steel, fertilizer, aviation, healthcare, and services. A seasoned professional with deep insight into the Indian market, he earns client praise for practical guidance on business and compliance challenges. With exceptional project management skills, he has led large-scale implementations involving cross-functional teams, delivering against tight deadlines for high-stakes consolidations. Prashant ensures in leveraging our financial statements consolidation software from the consolidated financials and process optimizations perspective.",
+  },
   {
     name: "Saurabh Aggarwal",
     designation: "Chief Product Officer",
@@ -21,17 +32,7 @@ export const team = [
     description:
       "Saurabh Aggarwal is a Chartered Accountant with over 16 years of experience in Ind AS/IFRS implementations, statutory audit, internal audit, process reviews, and due diligence. He is a seasoned and mature professional. He has also served at S.R. Batliboi & Co. LLP (member firm of EY) and BSR & Co. LLP (member firm of KPMG) for more than 11 years, where he handled a diversified clientele across sectors including automotive, FMCG, cement, and other large industry segments. He has extensive experience in IFRS, Ind AS, Indian GAAP, special audits, IFRS transition, ICFR, SOX testing, business process re-engineering, tax audits, capital market transactions, and due diligence. He combines deep accounting practice knowledge with a strong product vision mindset to shape software that meets the needs of auditors, CFOs, and regulatory reporting teams. Leveraging this hands-on experience, Saurabh is now involved with FinSensor in the development of a comprehensive suite of software for financial statement consolidation, lease accounting and related reporting automation.",
   },
-  {
-    name: "Prashant Jha",
-    designation: "Chief Operations Officer",
-    phone: "+91-955 593 4205",
-    email: "prashant.jha@rnbp.in",
-    experience: "12+ years",
-    expertise: "Taxation, Assurance & Regulatory Advisory",
-    image: "/PrashantJha.jpg",
-    description:
-      "Prashant is a Chartered Accountant with over 12 years of experience in taxation, assurance, and regulatory advisory. He is renowned for his technical prowess in financial reporting, consolidations and taxation. Prashant previously worked for more than three years at S. R. Batliboi & Co. LLP (an EY member firm), serving diverse clients including listed corporates, leading real estate developers, and players in steel, fertilizer, aviation, healthcare, and services. A seasoned professional with deep insight into the Indian market, he earns client praise for practical guidance on business and compliance challenges. With exceptional project management skills, he has led large-scale implementations involving cross-functional teams, delivering against tight deadlines for high-stakes consolidations. Prashant ensures in leveraging our financial statements consolidation software from the consolidated financials and process optimizations perspective.",
-  },
+
   {
     name: "Gaurav Malik",
     designation: "Technology Lead",
@@ -67,20 +68,7 @@ export const team = [
   },
 ];
 
-export const keyTeamMembers = [
-  { name: "Saloni Choudhary", role: "Director", dept: "Accounting and Reporting", image: null },
-  { name: "Nitesh Jha", role: "Manager", dept: "Reporting and Reconciliation", image: null },
-  { name: "Raman Mishra", role: "Manager", dept: "Accounting and Reporting", image: null },
-  { name: "Ditlab Pathak", role: "Assistant Manager", dept: "Accounting and Reporting", image: null },
-  { name: "Yogesh Kumar", role: "Assistant Manager", dept: "Accounting and Reporting", image: null },
-  { name: "Raj Kishore Thakur", role: "Executive", dept: "Accounting and Reporting", image: null },
-  { name: "Prabhat Karn", role: "Executive", dept: "Accounting and Reporting", image: null },
-  { name: "Priya", role: "Executive", dept: "Accounting and Reporting", image: null },
-  { name: "Jaan Baitha", role: "Executive", dept: "Reporting and Reconciliation", image: null },
-  { name: "Hemant", role: "Executive", dept: "Accounting and Reporting", image: null },
-  { name: "Rishabh Gupta", role: "Executive", dept: "Accounting and Reporting", image: null },
-  { name: "Satish Sah", role: "Executive", dept: "Accounting and Reporting", image: null },
-];
+ 
 
 export const industries = [
   "Real Estate",
@@ -95,4 +83,5 @@ export const industries = [
   "Education",
   "Paper & Packaging",
   "Infrastructure",
+  "Security & Surveillance",
 ];

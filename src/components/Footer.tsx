@@ -77,20 +77,20 @@ export default function Footer() {
             <h3 className="text-[#0a1628] font-bold text-lg mb-6">Our Services</h3>
             <ul className="space-y-3">
               {[
-                { label: "Offshore Accounting", href: "/services" },
-                { label: "Audit & Assurance", href: "/services" },
-                { label: "GST Advisory", href: "/services" },
-                { label: "Direct Taxation", href: "/services" },
-                { label: "Management Consultancy", href: "/services" },
-                { label: "Valuation Services", href: "/services" },
+                { label: "Assurance", href: "/services#assurance" },
+                { label: "Advisory Service", href: "/services#advisory-service" },
+                { label: "Accounting & Bookkeeping", href: "/services#accounting-bookkeeping" },
+                { label: "Management Consultancy", href: "/services#management-consultancy" },
+                { label: "Financial Reporting SaaS", href: "/services#financial-reporting-saas" },
+                { label: "Lease Accounting (Ind AS 116)", href: "/services#lease-accounting" },
               ].map((item) => (
                 <li key={item.label}>
-                  <Link
+                  <a
                     href={item.href}
                     className="text-[#0a1628]/60 hover:text-[#c9a84c] text-sm font-sans transition-colors duration-200"
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

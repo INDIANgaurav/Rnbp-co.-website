@@ -12,7 +12,8 @@ import {
   Truck, 
   GraduationCap, 
   Package, 
-  Construction 
+  Construction,
+  Shield
 } from "lucide-react";
 import { industries } from "@/app/about/data";
 
@@ -29,6 +30,7 @@ const industryIcons = [
   { name: "Education", icon: GraduationCap },
   { name: "Paper & Packaging", icon: Package },
   { name: "Infrastructure", icon: Construction },
+  { name: "Security & Surveillance", icon: Shield },
 ];
 
 export default function IndustriesSection() {

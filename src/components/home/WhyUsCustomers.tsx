@@ -61,7 +61,7 @@ export default function WhyUsCustomers() {
         </div>
 
         {/* Banner */}
-        <div className="bg-gradient-to-r from-[#6b7280] to-[#4b5563] text-white text-center py-6 mb-12">
+        <div className="bg-[#0a1628] text-white text-center py-6 mb-12 border-l-4 border-[#c9a84c]">
           <h3 className="text-xl sm:text-2xl font-bold tracking-wide">
             RNBP - Your natural partner through your Accounting change transition
           </h3>
@@ -97,6 +97,16 @@ export default function WhyUsCustomers() {
         </div>
 
         {/* Testimonials */}
+        <div className="text-center mb-12 mt-8">
+          <span className="text-[#c9a84c] text-xs tracking-widest uppercase font-sans font-semibold">
+            Client Testimonials
+          </span>
+          <h3 className="text-[#0a1628] text-3xl font-bold mt-3 mb-4">
+            What Our Clients Say
+          </h3>
+          <div className="w-12 h-0.5 bg-[#c9a84c] mx-auto" />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <motion.div

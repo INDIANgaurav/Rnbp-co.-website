@@ -27,7 +27,7 @@ export default function TeamMember({ member, index }: TeamMemberProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 bg-white border-l-4 border-[#c9a84c] shadow-lg hover:shadow-xl transition-shadow duration-300`}
+      className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 bg-white ${isEven ? 'border-l-4' : 'border-r-4'} border-[#c9a84c] shadow-lg hover:shadow-xl transition-shadow duration-300`}
     >
       {/* Image Section */}
       <div className="lg:w-80 shrink-0 relative overflow-hidden bg-gradient-to-br from-[#f8f5f0] to-[#e8dcc4]">

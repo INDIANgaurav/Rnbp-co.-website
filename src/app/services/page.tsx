@@ -1,5 +1,7 @@
-import { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   Building2,
   Calculator,
@@ -9,12 +11,6 @@ import {
   ArrowRight,
 } from "lucide-react";
 import ClientsSlider from "@/components/ClientsSlider";
-
-export const metadata: Metadata = {
-  title: "Services | R N B P & Co. Chartered Accountants",
-  description:
-    "Financial Reporting Software as a Service (SaaS) - Comprehensive services including Assurance, Advisory, Accounting/Book-keeping, and Management Consultancy.",
-};
 
 const offshoreServices = [
   {
@@ -57,19 +53,33 @@ const offshoreServices = [
       "DRHP/RHP/Prospectus Preparation",
       "Restated Financial Statements (SEBI)",
       "Technical Accounting Advisory",
+      "IPO Process Support",
+"Hedge Accounting Advisory",
+"Audit Support Services"
     ],
   },
   {
     title: "Financial Reporting Software as a service (SaaS)",
     items: [
       "FinSoEasy360 - Financial reconciliation & reporting",
-      "LAMsoEasy360 - Complete lease accounting solution",
       "Real-Time Consolidation",
       "Customizable Reporting Templates",
       "Cloud-Based Data Security (AWS)",
-      "Automated ROU Asset & Lease Liability Calculations",
+      "Segment-Wise Reporting",
     ],
-    link: "https://finsensor.ai/",
+    link: "https://finsensor.ai/Product/finsoeasy360",
+  },
+  {
+    title: "Lease Accounting (Ind AS 116)",
+    items: [
+      "LAMsoEasy360 - Leasemaster Data Management",
+      "Automated ROU Asset & Lease Liability Calculations",
+      "Interest and Amortisation Engine",
+      "Journal Entries and ERP Integration",
+      "Disclosure and Reporting Suite",
+      "Lease Lifecycle Tracking",
+    ],
+    link: "https://finsensor.ai/Product/lease-tool",
   },
 ];
 
@@ -77,6 +87,7 @@ const services = [
   {
     icon: BookOpen,
     title: "Assurance",
+    id: "assurance",
     description: "Independent audit and assurance services that add credibility and value to your business.",
     features: [
       "Statutory Audit",
@@ -95,6 +106,7 @@ const services = [
   {
     icon: Briefcase,
     title: "Advisory Service",
+    id: "advisory-service",
     description: "Strategic advisory services for tax, valuation, and regulatory compliance.",
     features: [
       "Indirect Tax",
@@ -120,6 +132,7 @@ const services = [
   {
     icon: Calculator,
     title: "Accounting/Book-keeping and Process automation",
+    id: "accounting-bookkeeping",
     description: "Complete accounting outsourcing and process automation services.",
     features: [
       "Complete Accounting Outsourcing",
@@ -138,10 +151,14 @@ const services = [
   {
     icon: Building2,
     title: "Management consultancy",
+    id: "management-consultancy",
     description: "Strategic management consultancy and CFO services for business growth.",
     features: [
       "Virtual CFO",
       "Finance outsourcing",
+       "IPO Process Support",
+"Hedge Accounting Advisory",
+"Audit Support Services",
       "Designing/preparation of process notes/standard operating procedures and Risk control matrices (RCMs)",
       "Identifying the design gaps GAAPs with current system with the requirements of IFC as per ICAI Guidance note",
       "Preparation of financial information to be included in DRHP/RHP/Prospectus",
@@ -156,24 +173,35 @@ const services = [
   {
     icon: Globe,
     title: "Financial Reporting Software as a service (SaaS)",
-    description: "Advanced cloud-based financial reporting and lease accounting solutions.",
+    id: "financial-reporting-saas",
+    description: "Advanced cloud-based financial reporting and consolidation solutions.",
     features: [
       "FinSoEasy360 - Seamless financial reconciliation and reporting automation",
-      "LAMsoEasy360 - Complete lease accounting solution from calculation to recognition",
-      "Real-Time Consolidation across units, subsidiaries, and joint ventures",
-      "Customizable Reporting Templates for statutory requirements",
-      "Segment-Wise Reporting with single click financial analysis",
-      "Centralized Data Management with integrity and security",
-      "Cloud-Based Data Security powered by AWS",
-      "Collaborative Workflows with role-based access and audit trails",
-      "Leasemaster Data Management for key lease terms and disclosures",
-      "Automated ROU Asset & Lease Liability Calculations",
-      "Interest and Amortisation Engine with periodic calculations",
+      "Real-Time Consolidation - Automatically consolidates financial data across units, subsidiaries, joint ventures and associates providing accurate and up-to-date consolidated financial statements",
+      "Customizable Reporting Templates - Create and adjust financial reports to meet statutory requirements and accounting standards with fully customizable templates",
+      "Segment-Wise Reporting - Generate detailed, segment-wise financial reports with a single click for easy financial analysis across multiple divisions",
+      "Centralized Data Management - Access and manage all financial data from one central location, ensuring data integrity and preventing unauthorized changes",
+      "Cloud-Based Data Security - Powered by AWS, offering robust security features to safeguard sensitive financial information from unauthorized access",
+      "Collaborative Workflows - Enable finance teams to collaborate efficiently with role-based access, audit trails, and real-time comment tracking for streamlined reporting",
       "Journal Entries and ERP Integration (FinSoEasy360 or any ERP)",
-      "Disclosure and Reporting Suite with Ind AS 116 disclosures",
-      "Lease Lifecycle Tracking from identification to termination",
     ],
-    link: "https://finsensor.ai/",
+    link: "https://finsensor.ai/Product/finsoeasy360",
+  },
+  {
+    icon: BookOpen,
+    title: "Lease Accounting (Ind AS 116)",
+    id: "lease-accounting",
+    description: "Complete lease accounting solution for Ind AS 116 compliance.",
+    features: [
+      "LAMsoEasy360 - Complete lease accounting solution from calculation to recognition",
+      "Leasemaster Data Management - Capture of key terms: start/end dates, rent, escalations, options (renewal/termination), variable payments, etc. for enabling the disclosure in the financial statements",
+      "Automated ROU Asset & Lease Liability Calculations - Does automatic computation of lease liability and ROU asset. Built-in logic for extensions, terminations, and remeasurements",
+      "Interest and Amortisation Engine - Periodic interest on the lease liability using the discounting rate, Depreciation on the ROU asset, Unwinding of interest calculation on security deposits",
+      "Journal Entries and ERP Integration - Generate journal entries to post lease entries in the financial reporting software (FinSoEasy360) or any other ERP",
+      "Disclosure and Reporting Suite - Pre-built Ind AS 116 disclosures: ROU asset and lease liability balances, depreciation, interest. Maturity schedules and cash-flow-based disclosures. Downloadable reports (Excel) for financial statement annexures and board/debt-covenant packages. Customisable management dashboards on total lease cost, interest cost, discount rate trend, year-wise depreciation, debt-like position, and upcoming renewals, etc.",
+      "Lease Lifecycle Tracking - Lifecycle view: identification → initial recognition → renewals / modifications → terminations / disposals. Full handling of modifications",
+    ],
+    link: "https://finsensor.ai/Product/lease-tool",
   },
 ];
 
@@ -190,7 +218,7 @@ export default function ServicesPage() {
             SERVICES
           </span>
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <span className="text-[#c9a84c] text-xs tracking-widest uppercase font-sans font-semibold">
             What We Offer
           </span>
@@ -207,8 +235,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Offshore Accounting - Featured */}
-      <section className="bg-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="offshore-accounting" className="bg-white py-24">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-12 h-12 bg-[#c9a84c]/10 border border-[#c9a84c]/20 flex items-center justify-center shrink-0">
               <Globe size={22} className="text-[#c9a84c]" />
@@ -225,17 +253,32 @@ export default function ServicesPage() {
             skilled professionals — all contributing to improved bottom-line results.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {offshoreServices.map((s, i) => {
-              const CardWrapper = s.link ? 'a' : 'div';
+              const CardWrapper = s.link ? motion.a : motion.div;
               const cardProps = s.link 
-                ? { href: s.link, target: "_blank", rel: "noopener noreferrer", className: "bg-[#f8f5f0] p-6 border border-[#0a1628]/10 hover:border-[#c9a84c] hover:shadow-lg transition-all duration-300 cursor-pointer block" }
-                : { className: "bg-[#f8f5f0] p-6 border border-[#0a1628]/10" };
+                ? { 
+                    href: s.link, 
+                    target: "_blank", 
+                    rel: "noopener noreferrer", 
+                    className: "bg-[#f8f5f0] p-6 border border-[#0a1628]/10 hover:border-[#c9a84c] hover:shadow-lg transition-all duration-300 cursor-pointer block flex flex-col",
+                    initial: { opacity: 0, y: 20 },
+                    whileInView: { opacity: 1, y: 0 },
+                    viewport: { once: true },
+                    transition: { duration: 0.5, delay: i * 0.1 }
+                  }
+                : { 
+                    className: "bg-[#f8f5f0] p-6 border border-[#0a1628]/10 flex flex-col",
+                    initial: { opacity: 0, y: 20 },
+                    whileInView: { opacity: 1, y: 0 },
+                    viewport: { once: true },
+                    transition: { duration: 0.5, delay: i * 0.1 }
+                  };
               
               return (
                 <CardWrapper key={i} {...cardProps}>
                   <h3 className="text-[#0a1628] font-bold mb-3 text-base">{s.title}</h3>
-                  <ul className="space-y-1.5">
+                  <ul className="space-y-1.5 mb-auto">
                     {s.items.map((item, j) => (
                       <li key={j} className="flex items-start gap-2 text-xs text-[#0a1628]/60 font-sans">
                         <span className="w-1 h-1 bg-[#c9a84c] rounded-full shrink-0 mt-1.5" />
@@ -244,7 +287,7 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                   {s.link && (
-                    <div className="mt-4 flex items-center gap-1 text-[#c9a84c] text-xs font-semibold">
+                    <div className="mt-4 pt-4 border-t border-[#0a1628]/10 flex items-center gap-1 text-[#c9a84c] text-xs font-semibold">
                       <span>Learn More</span>
                       <ArrowRight size={14} />
                     </div>
@@ -257,8 +300,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Comprehensive Services Grid */}
-      <section className="bg-[#f8f5f0] py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="comprehensive-services" className="bg-[#f8f5f0] py-24">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-[#c9a84c] text-xs tracking-widest uppercase font-sans font-semibold">
               Our Services
@@ -272,13 +315,28 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => {
               const Icon = service.icon;
-              const CardWrapper = service.link ? 'a' : 'div';
+              const CardWrapper = service.link ? motion.a : motion.div;
               const cardProps = service.link 
-                ? { href: service.link, target: "_blank", rel: "noopener noreferrer", className: "bg-white p-8 hover:shadow-lg hover:border-[#c9a84c] border border-transparent transition-all duration-300 cursor-pointer block" }
-                : { className: "bg-white p-8 hover:shadow-lg transition-shadow duration-300" };
+                ? { 
+                    href: service.link, 
+                    target: "_blank", 
+                    rel: "noopener noreferrer", 
+                    className: "bg-white p-8 hover:shadow-lg hover:border-[#c9a84c] border border-transparent transition-all duration-300 cursor-pointer flex flex-col",
+                    initial: { opacity: 0, y: 30 },
+                    whileInView: { opacity: 1, y: 0 },
+                    viewport: { once: true },
+                    transition: { duration: 0.6, delay: index * 0.1 }
+                  }
+                : { 
+                    className: "bg-white p-8 hover:shadow-lg transition-shadow duration-300 flex flex-col",
+                    initial: { opacity: 0, y: 30 },
+                    whileInView: { opacity: 1, y: 0 },
+                    viewport: { once: true },
+                    transition: { duration: 0.6, delay: index * 0.1 }
+                  };
               
               return (
-                <CardWrapper key={index} {...cardProps}>
+                <CardWrapper key={index} {...cardProps} id={service.id}>
                   <div className="flex items-start gap-5 mb-6">
                     <div className="w-12 h-12 bg-[#c9a84c]/10 border border-[#c9a84c]/20 flex items-center justify-center shrink-0">
                       <Icon size={20} className="text-[#c9a84c]" />
@@ -288,8 +346,8 @@ export default function ServicesPage() {
                       <p className="text-[#0a1628]/60 text-sm font-sans leading-relaxed">{service.description}</p>
                     </div>
                   </div>
-                  <div className="border-t border-gray-100 pt-6">
-                    <ul className="space-y-2">
+                  <div className="border-t border-gray-100 pt-6 flex-grow flex flex-col">
+                    <ul className="space-y-2 mb-auto">
                       {service.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-2 text-sm text-[#0a1628]/70 font-sans">
                           <span className="w-1.5 h-1.5 bg-[#c9a84c] rounded-full shrink-0 mt-1.5" />
@@ -318,7 +376,7 @@ export default function ServicesPage() {
 
       {/* CTA */}
       <section className="bg-[#c9a84c] py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-white text-4xl font-bold mb-4">Need a Specific Service?</h2>
           <p className="text-white/90 font-sans mb-8 max-w-xl mx-auto">
             Talk to our experts and get a customized solution tailored to your exact requirements.
